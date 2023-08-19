@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center">
+            <h1 class="mb-4">Color Guessing Game</h1>
+        </header>
+        
+        <main>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h2 class="card-title">Guess the Color</h2>
+                            <button type="button" class="btn btn-primary" onclick="runGame()">Start Game</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="text-center mt-4">
+            <p>&copy; 2023 Color Guessing Game</p>
+        </footer>
+    </div>
+
+    <script>
+
+      const colors_array = ['blue', 'purple', 'cyan', 'gold', 'gray', 'green', 'magenta', 'orange', 'red', 'white', 'yellow'];
+      const sortedColorsArray = colors_array.sort();
+
+      function runGame() {
+        let guess = '';
+        let correct = false;
+        const targetIndex = Math.floor(Math.random() * sortedColorsArray.length) + 1; // gives the index the array
+        const target = sortedColorsArray[targetIndex]; // gives the colors in the array
+        let numTries = 0; 
+        
+        do {
+          guess = prompt(`I am thinking of one of these color:\n\n ${sortedColorsArray.join(', ')} \n\nWhat color am I thinking of? \n`)
+
+          // Player hits Cancel on the prompt, this will end the prompt
+          if(guess === null) {
+            return;
+          }
+          
+          correct = checkGuess(guess, target);
+          numTries++;
+         
+          document.body.style.background = guess;
+
+
+        } while(!correct) {
+          //this exit the loop.
+          alert(`Congratulations! You guessed the correct color ${guess} and it took ${numTries} tries.`);
+        }
+
+      }
+
+      function checkGuess(guess, target) {
+        let correct = false;
+        
+      //We use the includes method to check if the guess is included in the colorsarray.
+        if (!colors_array.includes(guess)) {
+        alert(`"${guess}" is not a valid color. Please choose a color from the list.`);
+      } else if (guess > target) {
+        alert('Too high! Try a color that comes earlier in the alphabet.');
+      } else if (guess < target) {
+        alert('Too low! Try a color that comes later in the alphabet.');
+      } else {
+        correct = true;
+      }
+
+        return correct
+      }
+
+
+    </script>
+
+    <!-- Add Bootstrap JS and your own JS script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

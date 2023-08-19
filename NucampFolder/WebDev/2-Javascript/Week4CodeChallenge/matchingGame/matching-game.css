@@ -1,0 +1,61 @@
+.header {
+  display: grid;
+  justify-content: center;
+}
+
+.header > p {
+  margin-top: -20px;
+  margin-left: 25px;
+}
+
+.board {
+  position: relative;
+  background-color: #333;
+  border-radius: 10px;
+  border: solid red;
+  width: 100%; /* Adjust the width as needed */
+  height: 70vh; 
+  display: flex; /* Add flex display */
+}
+
+.right-side {
+  border-left: 10px solid white; /* Creates a solid white line on the left */
+  position: relative;
+  width: calc(50% - 5px); /* Adjust width based on the border size */
+  height: 100%;
+  left: 50%;
+}
+
+img { 
+  position: absolute;
+  width: 5vw; /* Set the width relative to the viewport width */
+  max-width: calc(50% - 5px); /* Set the maximum width with border offset */
+  height: auto; /* Maintain aspect ratio */
+}
+
+img:hover{
+  transform: scale(2);
+
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  display: inline;
+}
+
+.start-button:hover {
+  background-color: #555;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Waves Aquatic Park</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+     <h1>Wild Waves Aquatic Park</h1>
+    </header>
+  
+     <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body text-center">
+              <h2 class="card-title">Purchase Attraction</h2>
+              <button type="button" class="btn btn-primary" onclick="buyTicket()">Purchase Attraction</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    const WAVE_POOL_MIN_HEIGHT = 42; 
+    const WATERSLIDE_MIN_HEIGHT = 48; 
+    const LAZY_RIVER_MIN_HEIGHT = 36;
+
+    function buyTicket() {
+      const attractionType = prompt('Which attraction do you want to visit: type "wave" for wave pool, "water" for waterslide, or "river" for lazy river?');
+      const userHeight = prompt('What is your height in inches?');
+
+      let isAllowed = checkHeight(attractionType, userHeight);
+
+      if (!isAllowed) {
+        const isWithAdult = askWithAdult();
+        if (isWithAdult === "Allow") {
+          isAllowed = true;
+        }
+      }
+
+      if (isAllowed) {
+        alert('Allowed');
+      } else {
+        alert('Not Allowed');
+      }
+
+      console.log("User's selected attraction is " + attractionType);
+      console.log("User's height is " + userHeight);
+    }
+
+    function askWithAdult() {
+      const withAdult = prompt('Are you with an adult? (Yes/No)');
+      return withAdult.toLowerCase() === 'yes' || withAdult.toLowerCase() === 'y' ? "Allow" : "Not Allow";
+    }
+
+    function checkHeight(attraction, height, isWithAdult) {
+      attraction = attraction.toLowerCase();
+
+      if (height >= 43 && isWithAdult) {
+        return true;
+      }
+
+      if (attraction === "wave" && height >= WAVE_POOL_MIN_HEIGHT) {
+        return true;
+      } else if (attraction === "water" && height >= WATERSLIDE_MIN_HEIGHT) {
+        return true;
+      } else if (attraction === "river" && height >= LAZY_RIVER_MIN_HEIGHT) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    
+  </script>
+  
+</body>
+</html>

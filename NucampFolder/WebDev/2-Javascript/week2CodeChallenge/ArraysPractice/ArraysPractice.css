@@ -1,0 +1,17 @@
+body {
+  font-family: 'Sans Source Pro', sans-serif; 
+}
+
+#results {
+    border: 3px darkblue solid;
+    padding: 5px 20px 15px;
+    background: aqua;
+}
+
+#results > h2 {
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}

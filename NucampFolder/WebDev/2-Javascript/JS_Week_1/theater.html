@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magical Mystery Theater</title>
+
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="my-4">Magical Mystery Theater</h1>
+    <div class="mb-3">
+      <button type="button" class="btn btn-primary" onClick="buyTicket()">Purchase a Ticket</button>
+    </div>
+  </div>
+
+  <script>
+    const generalAdmission = 20;
+    const discountedAdmission = 10; // under 12 or over 65
+    const matinee = 3;
+
+    function getBaseTicketCost(age) {
+      if (age <= 12 || age >= 65) {
+        return discountedAdmission;
+      }
+
+      return generalAdmission;
+    }
+
+    function matineeDiscount(cost, isMatinee) {
+
+      if (isMatinee.toLowerCase() === 'yes' || isMatinee.toLowerCase() === 'y') {
+        cost -= matinee;
+      }
+
+      return cost;
+    }
+
+    function buyTicket() {
+      const age = prompt("What is your age");
+      const isMatinee = prompt('Are you attending a matinee show');
+
+      let cost = getBaseTicketCost(age);
+
+      cost = matineeDiscount(cost, isMatinee);
+
+      alert('Your ticket will cost: $' + cost);
+    }
+  </script>
+
+  <!-- Add Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
