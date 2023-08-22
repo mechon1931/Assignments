@@ -1,0 +1,4 @@
+.env
+.parcel
+node_modules
+dist
