@@ -1,0 +1,230 @@
+[debug] [2023-08-22T02:48:53.603Z] ----------------------------------------------------------------------
+[debug] [2023-08-22T02:48:53.604Z] Command:       /Users/drsuite/.nvm/versions/node/v16.13.2/bin/node /Users/drsuite/.nvm/versions/node/v16.13.2/bin/firebase init
+[debug] [2023-08-22T02:48:53.605Z] CLI Version:   12.4.8
+[debug] [2023-08-22T02:48:53.605Z] Platform:      darwin
+[debug] [2023-08-22T02:48:53.605Z] Node Version:  v16.13.2
+[debug] [2023-08-22T02:48:53.606Z] Time:          Mon Aug 21 2023 19:48:53 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-08-22T02:48:53.606Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-22T02:48:53.610Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-22T02:48:53.611Z] > authorizing via signed-in user (mechon3@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/drsuite/Macbook-Document/Assignments/NucampFolder/WebDev/2-Javascript/Week5CodeChallenge/testProject
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-08-22T02:50:06.395Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-08-22T02:50:06.395Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"InitialtestProject","name":"initialProject"}
+[debug] [2023-08-22T02:50:06.780Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-08-22T02:50:06.781Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-08-22T02:50:06.902Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (/Users/drsuite/.nvm/versions/node/v16.13.2/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/drsuite/.nvm/versions/node/v16.13.2/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-08-22T02:50:39.152Z] ----------------------------------------------------------------------
+[debug] [2023-08-22T02:50:39.153Z] Command:       /Users/drsuite/.nvm/versions/node/v16.13.2/bin/node /Users/drsuite/.nvm/versions/node/v16.13.2/bin/firebase init
+[debug] [2023-08-22T02:50:39.153Z] CLI Version:   12.4.8
+[debug] [2023-08-22T02:50:39.154Z] Platform:      darwin
+[debug] [2023-08-22T02:50:39.154Z] Node Version:  v16.13.2
+[debug] [2023-08-22T02:50:39.155Z] Time:          Mon Aug 21 2023 19:50:39 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-08-22T02:50:39.155Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-22T02:50:39.159Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-22T02:50:39.159Z] > authorizing via signed-in user (mechon3@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/drsuite/Macbook-Document/Assignments/NucampFolder/WebDev/2-Javascript/Week5CodeChallenge/testProject
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-08-22T02:51:01.562Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-08-22T02:51:01.562Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"initialtestProject","name":"projecttest"}
+[debug] [2023-08-22T02:51:01.900Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-08-22T02:51:01.901Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-08-22T02:51:01.988Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (/Users/drsuite/.nvm/versions/node/v16.13.2/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/drsuite/.nvm/versions/node/v16.13.2/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-08-22T02:52:00.033Z] ----------------------------------------------------------------------
+[debug] [2023-08-22T02:52:00.035Z] Command:       /Users/drsuite/.nvm/versions/node/v16.13.2/bin/node /Users/drsuite/.nvm/versions/node/v16.13.2/bin/firebase init
+[debug] [2023-08-22T02:52:00.035Z] CLI Version:   12.4.8
+[debug] [2023-08-22T02:52:00.036Z] Platform:      darwin
+[debug] [2023-08-22T02:52:00.036Z] Node Version:  v16.13.2
+[debug] [2023-08-22T02:52:00.041Z] Time:          Mon Aug 21 2023 19:52:00 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-08-22T02:52:00.042Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-22T02:52:00.046Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-22T02:52:00.047Z] > authorizing via signed-in user (mechon3@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/drsuite/Macbook-Document/Assignments/NucampFolder/WebDev/2-Javascript/Week5CodeChallenge/testProject
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-08-22T02:52:30.076Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-08-22T02:52:30.076Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"initialProjectTest","name":"initialProjectTest"}
+[debug] [2023-08-22T02:52:30.416Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-08-22T02:52:30.417Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-08-22T02:52:30.531Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (/Users/drsuite/.nvm/versions/node/v16.13.2/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/drsuite/.nvm/versions/node/v16.13.2/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-08-22T02:53:55.461Z] ----------------------------------------------------------------------
+[debug] [2023-08-22T02:53:55.463Z] Command:       /Users/drsuite/.nvm/versions/node/v16.13.2/bin/node /Users/drsuite/.nvm/versions/node/v16.13.2/bin/firebase init
+[debug] [2023-08-22T02:53:55.463Z] CLI Version:   12.4.8
+[debug] [2023-08-22T02:53:55.463Z] Platform:      darwin
+[debug] [2023-08-22T02:53:55.463Z] Node Version:  v16.13.2
+[debug] [2023-08-22T02:53:55.464Z] Time:          Mon Aug 21 2023 19:53:55 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-08-22T02:53:55.465Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-22T02:53:55.468Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-22T02:53:55.469Z] > authorizing via signed-in user (mechon3@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/drsuite/Macbook-Document/Assignments/NucampFolder/WebDev/2-Javascript/Week5CodeChallenge/testProject
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-08-22T02:54:58.269Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-08-22T02:54:58.269Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"mgtestproject-823","name":"testproject"}
+[debug] [2023-08-22T02:54:59.013Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-08-22T02:54:59.013Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.8305091978071865849"}
+[debug] [2023-08-22T02:54:59.014Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 [none]
+[debug] [2023-08-22T02:54:59.559Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 200
+[debug] [2023-08-22T02:54:59.560Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 {"name":"operations/cp.8305091978071865849"}
+[debug] [2023-08-22T02:55:00.062Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-08-22T02:55:00.062Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 [none]
+[debug] [2023-08-22T02:55:00.616Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 200
+[debug] [2023-08-22T02:55:00.616Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 {"name":"operations/cp.8305091978071865849"}
+[debug] [2023-08-22T02:55:01.617Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-08-22T02:55:01.618Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 [none]
+[debug] [2023-08-22T02:55:02.184Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 200
+[debug] [2023-08-22T02:55:02.184Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 {"name":"operations/cp.8305091978071865849","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2023-08-22T02:55:04.185Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-08-22T02:55:04.186Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 [none]
+[debug] [2023-08-22T02:55:04.858Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 200
+[debug] [2023-08-22T02:55:04.858Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8305091978071865849 {"name":"operations/cp.8305091978071865849","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"983437956868","projectId":"mgtestproject-823","lifecycleState":"ACTIVE","name":"testproject","createTime":"2023-08-22T02:55:00.847Z"}}
+[debug] [2023-08-22T02:55:04.859Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/mgtestproject-823:addFirebase [none]
+[debug] [2023-08-22T02:55:07.110Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/mgtestproject-823:addFirebase 200
+[debug] [2023-08-22T02:55:07.110Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/mgtestproject-823:addFirebase {"name":"operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5"}
+[debug] [2023-08-22T02:55:07.111Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 [none]
+[debug] [2023-08-22T02:55:07.724Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 200
+[debug] [2023-08-22T02:55:07.724Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 {"name":"operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5"}
+[debug] [2023-08-22T02:55:08.225Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-22T02:55:08.227Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 [none]
+[debug] [2023-08-22T02:55:08.749Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 200
+[debug] [2023-08-22T02:55:08.749Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 {"name":"operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5"}
+[debug] [2023-08-22T02:55:09.751Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-22T02:55:09.752Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 [none]
+[debug] [2023-08-22T02:55:10.181Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 200
+[debug] [2023-08-22T02:55:10.181Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 {"name":"operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5"}
+[debug] [2023-08-22T02:55:12.183Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-22T02:55:12.183Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 [none]
+[debug] [2023-08-22T02:55:12.518Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 200
+[debug] [2023-08-22T02:55:12.518Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 {"name":"operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5"}
+[debug] [2023-08-22T02:55:16.519Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-22T02:55:16.520Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 [none]
+[debug] [2023-08-22T02:55:17.043Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 200
+[debug] [2023-08-22T02:55:17.043Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 {"name":"operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5"}
+[debug] [2023-08-22T02:55:25.045Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-22T02:55:25.046Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 [none]
+[debug] [2023-08-22T02:55:25.747Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 200
+[debug] [2023-08-22T02:55:25.747Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5 {"name":"operations/workflows/NzFiMWNmODUtMTBhOS00ZGIwLWI1YjItOTQ1NmMzNmM1NzQ5","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"mgtestproject-823","projectNumber":"983437956868","displayName":"testproject","name":"projects/mgtestproject-823","resources":{"hostingSite":"mgtestproject-823"}}}
+[info] 
+[info] 🎉🎉🎉 Your Firebase project is ready! 🎉🎉🎉
+[info] 
+[info] Project information:
+[info]    - Project ID: mgtestproject-823
+[info]    - Project Name: testproject
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/mgtestproject-823/overview
+[info] i  Using project mgtestproject-823 (testproject) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-08-22T02:56:10.453Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-08-22T02:56:10.545Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-08-22T02:56:10.545Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.2.0","browserURL":"https://www.gstatic.com/firebasejs/10.2.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.2.0/firebase.tgz"},"live":{"version":"10.2","browserURL":"https://www.gstatic.com/firebasejs/live/10.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.2/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.2.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.2.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.2.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.2.0/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.2.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.2.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.2.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.2.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.2.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.2.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.2.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.2.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore.memory.js"}}
+[info] ✔  Wrote dist/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/drsuite/Macbook-Document/Assignments 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=454908235&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-08-22T02:56:13.640Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-08-22T02:56:13.640Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-08-22T02:56:13.984Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-08-22T02:56:13.984Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-08-22T02:56:13.992Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-08-22T02:56:14.320Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-08-22T02:56:14.321Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"mechon1931","id":37190324,"node_id":"MDQ6VXNlcjM3MTkwMzI0","avatar_url":"https://avatars.githubusercontent.com/u/37190324?v=4","gravatar_id":"","url":"https://api.github.com/users/mechon1931","html_url":"https://github.com/mechon1931","followers_url":"https://api.github.com/users/mechon1931/followers","following_url":"https://api.github.com/users/mechon1931/following{/other_user}","gists_url":"https://api.github.com/users/mechon1931/gists{/gist_id}","starred_url":"https://api.github.com/users/mechon1931/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mechon1931/subscriptions","organizations_url":"https://api.github.com/users/mechon1931/orgs","repos_url":"https://api.github.com/users/mechon1931/repos","events_url":"https://api.github.com/users/mechon1931/events{/privacy}","received_events_url":"https://api.github.com/users/mechon1931/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":3,"public_gists":0,"followers":0,"following":0,"created_at":"2018-03-08T18:10:11Z","updated_at":"2023-08-10T20:07:01Z","private_gists":0,"total_private_repos":3,"owned_private_repos":3,"disk_usage":30421,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as mechon1931 
+[info] 
