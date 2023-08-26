@@ -25,21 +25,45 @@ carouselButton.addEventListener('click', function () {
 async function fetchWeather() {
   const apiKey = process.env.OPEN_WEATHER_API_KEY;
   const city = "Los Angeles";
-  const encodedCity = encodeURIComponent(city); // URL encode the city name
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   
   try {
     const response = await fetch(url);
-
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data);
-    } else {
-      console.error("Request failed with status:", response.status);
-    }
+    const data = await response.json();
+    displayWeather(data);
+    console.log(data);
   } catch (error) {
     console.error("There was an error:", error);
   }
 }
 
-fetchWeather();
+function displayWeather(data) {
+
+  const weatherIconContainer = document.getElementById("weather-icon");
+  const temperatureElement = document.getElementById("weather-temp");
+  const descriptionElement = document.getElementById("weather-description");
+
+  
+      const temperature = data.main.temp;
+      const description = data.weather[0].description;
+      const iconCode = data.weather[0].icon;
+
+      console.log(`Temperature: ${temperature}, description: ${description}, iconCode: ${iconCode}`);
+
+    
+      const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
+      const iconImage = document.createElement("img");
+      iconImage.src = iconUrl;
+      weatherIconContainer.appendChild(iconImage);
+
+      temperatureElement.textContent = `${temperature}`;
+      descriptionElement.textContent = description;
+
+
+      
+  
+
+ 
+}
+
+  fetchWeather();
