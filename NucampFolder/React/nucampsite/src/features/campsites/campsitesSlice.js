@@ -1,9 +1,9 @@
-import campsites from 'NucampFolder/React/nucampsite/src/app/shared/CAMPSITES';
+import { CAMPSITES } from '/Users/drsuite/Macbook-Document/Assignments/NucampFolder/React/nucampsite/src/app/shared/CAMPSITES.js';
 
 export const selectAllCampsites = () => {
-  return campsites;
+  return CAMPSITES;
 };
 
 export const selectRandomCampsite = () => {
-  return campsites[Math.floor(campsites.length * Math.random())];
+  return CAMPSITES[Math.floor(CAMPSITES.length * Math.random())];
 };
