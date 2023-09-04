@@ -1,5 +1,5 @@
 import './App.css';
-import CampsitesList from './features/CampsitesList';
+import CampsitesDirectoryPage from '../src/pages/CampsitesDirectoryPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -9,7 +9,7 @@ function App() {
 
     <div className="App">
       <Header />
-      <CampsitesList />
+      <CampsitesDirectoryPage />
       <Footer />
 
     </div>
