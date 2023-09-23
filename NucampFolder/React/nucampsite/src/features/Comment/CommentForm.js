@@ -8,7 +8,9 @@ import {
 import {
   Formik, 
   Field, 
-  Form } from 'formik';
+  Form,
+  ErrorMessage } from 'formik';
+import { validateCommentForm } from '../../utils/validateCommentForm';
 
 
 const CommentForm = ( {campsiteId }) => {
@@ -42,7 +44,7 @@ const CommentForm = ( {campsiteId }) => {
       <ModalHeader toggle={() => setModalOpen(false)}>
         Add Comment
       </ModalHeader>
-      
+
         <Formik
           initialValues={{
             rating: undefined,
@@ -50,6 +52,7 @@ const CommentForm = ( {campsiteId }) => {
             commentText: '',
           }}
           onSubmit={handleSubmit}
+          validate={validateCommentForm}
         >
           <Form>
             <FormGroup>
@@ -68,6 +71,9 @@ const CommentForm = ( {campsiteId }) => {
                 <option>4</option>
                 <option>5</option>
               </Field>
+              <ErrorMessage name='rating'>
+              {(msg) => <p className='text-danger'>{msg}</p>}
+            </ErrorMessage>
             </FormGroup>
 
             <FormGroup>
@@ -79,6 +85,9 @@ const CommentForm = ( {campsiteId }) => {
                 placeholder='Your Name Here'
                 className='form-control'
               />
+              <ErrorMessage name='author'>
+              {(msg) => <p className='text-danger'>{msg}</p>}
+            </ErrorMessage>
             </FormGroup>
 
             <FormGroup>
