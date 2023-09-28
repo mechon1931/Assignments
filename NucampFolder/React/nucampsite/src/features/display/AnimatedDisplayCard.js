@@ -19,7 +19,7 @@ const AnimatedDisplayCard = ({ item }) => {
     }, []);
     
     return (
-        <animated.div div style={animatedStyle}>
+        <animated.div style={animatedStyle}>
             <Card>
                 <CardImg src={image} alt={name} />
                 <CardBody>
