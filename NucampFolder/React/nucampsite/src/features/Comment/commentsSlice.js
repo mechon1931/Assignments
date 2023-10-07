@@ -15,7 +15,7 @@ export const fetchComments = createAsyncThunk(
 );
 
 const initialState = {
-  commentsArray: {}, 
+  commentsArray: [], 
   isLoading: true,
   errMsg: ''
 };
