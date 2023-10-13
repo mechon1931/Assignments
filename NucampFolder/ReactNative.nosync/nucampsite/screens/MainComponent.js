@@ -35,6 +35,7 @@ const DirectoryNavigator = () => {
         </DirectoryNavigator>
     )
 }
+
 const Main = () => {
 
     return (
