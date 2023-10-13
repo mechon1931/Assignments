@@ -8,7 +8,7 @@ const DirectoryNavigatior = () => {
     const Stack = createStackNavigator();
 
     return(
-        <DirectoryNavigatior>
+        <DirectoryNavigator>
             <Stack.Navigator
                 initialRouteName='Directory'
                 screenOptions={{
@@ -32,7 +32,7 @@ const DirectoryNavigatior = () => {
                     }
                 />
             </Stack.Navigator>
-        </DirectoryNavigatior>
+        </DirectoryNavigator>
     )
 }
 const Main = () => {
