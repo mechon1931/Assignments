@@ -4,7 +4,7 @@ import DirectoryScreen from './DirectoryScreen';
 import Constants from 'expo-constants';
 import { createStackNavigator } from '@react-navigation/stack';
 
-const DirectoryNavigatior = () => {
+const DirectoryNavigator = () => {
     const Stack = createStackNavigator();
 
     return(
