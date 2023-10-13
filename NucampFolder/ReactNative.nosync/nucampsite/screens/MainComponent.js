@@ -39,11 +39,11 @@ const Main = () => {
 
     return (
         <View style={{ flex: 1, paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight }}>
-            <DirectoryNavigatior
+            <DirectoryNavigator
                 campsites={campsites}
                 onPress={(campsiteId) => setSelectedCampsiteId(campsiteId)}
             />
-            <DirectoryNavigatior
+            <DirectoryNavigator
                 campsite={
                     campsites.filter(
                         (campsite) => campsite.id === selectedCampsiteId
