@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 import RenderCampsite from '../features/campsites/RenderCampsite';
 import { useDispatch } from 'react-redux';
 import { toggleFavorite } from '../features/favorites/favoritesSlice';
+import { postComment } from '../features/comments/commentsSlice';
 
 const CampsiteInfoScreen = ({ route }) => {
     const { campsite } = route.params;
@@ -30,7 +31,7 @@ const CampsiteInfoScreen = ({ route }) => {
             text,
             campsiteId: campsite.id
         };
-        console.log(newComment);
+        dispatch(postComment(newComment));
     };
 
     const resetForm = () => {
