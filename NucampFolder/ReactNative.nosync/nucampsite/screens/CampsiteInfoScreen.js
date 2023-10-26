@@ -47,7 +47,7 @@ const CampsiteInfoScreen = ({ route }) => {
                     startingValue={item.rating}
                     imageSize={10}
                     style={{ alignitems: 'flex-start', paddingVertical: '5%' }}
-                    read-only
+                    readonly
                 />
                 <Text style={{ fontSize: 12 }}>
                     {`-- ${item.author}, ${item.date}`}
@@ -98,21 +98,20 @@ const CampsiteInfoScreen = ({ route }) => {
             >
             </Rating>
             <Input
-                placeholder='Author'
-                leftIcon={{ type: 'font-awesome', name: 'user-o' }}
+                placeholder="Author"
+                leftIcon={{ type: 'font-awesome', name: 'user-o' }} // Use the Font Awesome user-o icon
                 leftIconContainerStyle={{ paddingRight: 10 }}
-                onFinishRating={(author) => setAuthor(author)}
-                value='Author'
-            >    
-            </Input>
+                onChangeText={(author) => setAuthor(author)} // Update the 'author' state when the text changes
+                value={author} // Bind the value to the 'author' state
+            />
             <Input
-                placeholder='Comment'
-                leftIcon={{ type: 'font-awesome', name: 'comment-o' }}
+                placeholder="Comment"
+                leftIcon={{ type: 'font-awesome', name: 'comment-o' }} // Use the Font Awesome comment-o icon
                 leftIconContainerStyle={{ paddingRight: 10 }}
-                onFinishRating={(comment) => setText(comment)}
-                value='Comment'
-            >
-            </Input>
+                onChangeText={(comment) => setText(comment)} // Update the 'comment' state when the text changes
+                value={text} // Bind the value to the 'text' state
+            />
+
             <View style={ styles.SubmitStyleBorder }>
                 <Button 
                     title='Submit'
