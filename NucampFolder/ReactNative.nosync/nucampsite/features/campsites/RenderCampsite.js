@@ -1,20 +1,59 @@
-import { Text, View } from 'react-native';
-import { Card } from 'react-native-elements';
-import { StyleSheet } from 'react-native';
-import { Icon } from 'react-native-elements';
+import {
+    Text,
+    View,
+    StyleSheet,
+    PanResponder,
+    Alert
+} from 'react-native';
+import { Card, Icon } from 'react-native-elements';
 import { baseUrl } from '../../shared/baseUrl';
-import * as Animatable from 'react-native-animatable'
+import * as Animatable from 'react-native-animatable';
+
 
 
 const RenderCampsite = (props) => {
     
     const {campsite} = props;
+    const isLeftSwipe = ({ dx }) => dx < -200;
+
+    const pandResponder = pandResponder.create({
+        onStartShouldSetPanResponder: () => true,
+        onPanResponderEnd: (e, gestureState) => {
+            console.log(gestureState);
+
+            if(isLeftSwipe(gestureState)) {
+                Alert.alert(
+                    'Add Favorite',
+                    'Are you sure you wish to add ' +
+                    campsite.name +
+                    ' to favorites?',
+                    [
+                        {
+                            text: 'Cancel',
+                            style: 'cancel',
+                            onPress: () => console.log('Cancel Pressed')
+                        },
+                        {
+                            text: 'OK',
+                            onPress: () =>
+                            props.isFavorite
+                            ? console.log('Already set as a favorite')
+                            : props.markFavorite()
+                        }
+                    ],
+                    { cancelable: false }
+                );
+            }
+        }
+    });
+
     if (campsite) {
         return (
             <Animatable.View 
-                animation='fadeInDownBig'
+                animation='fadeInDown'
                 duration={2000}
                 delay={1000}
+                {...pandResponder.panHandlers}
             >
                 <Card containerStyle={ styles.cardContainer }>
                     <Card.Image source={{ uri: baseUrl + campsite.image }}>
