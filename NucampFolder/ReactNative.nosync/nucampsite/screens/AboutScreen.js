@@ -3,6 +3,7 @@ import { Card, ListItem, Text, Avatar } from "react-native-elements";
 import { useSelector } from "react-redux";
 import { baseUrl } from "../shared/baseUrl";
 import Loading from '../components/LoadingComponent';
+import * as Animatable from 'react-native-animatable';
 
 const Mission = () => {
   return(
@@ -43,18 +44,29 @@ const AboutScreen = () => {
   if(partners.errMess) {
     return(
       <ScrollView>
-        <Mission />
-        <Card>
-          <Card.Title>Community Partners</Card.Title>
-          <Card.Divider />
-          <Text>{partners.errMess}</Text>
-        </Card>
+        <Animatable.View
+          animation='fadeInDown'
+          duration={2000}
+          delay={1000}
+        >
+          <Mission />
+          <Card>
+            <Card.Title>Community Partners</Card.Title>
+            <Card.Divider />
+            <Text>{partners.errMess}</Text>
+          </Card>
+        </Animatable.View>
       </ScrollView>
     );
   }
   
   return(
     <ScrollView>
+      <Animatable.View
+        animation='fadeInDown'
+        duration={2000}
+        delay={1000}
+      >
       <Mission />
 
       <Card>
@@ -70,6 +82,7 @@ const AboutScreen = () => {
           </ListItem>
       ))}
       </Card>
+      </Animatable.View>
     </ScrollView>
   )
 };
