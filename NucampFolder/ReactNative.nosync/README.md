@@ -9,6 +9,8 @@ Start JSON Server
 
 npm install -g json-server
 
+change /shared/baseUrl.js. THe ip address to local machine or it won't work.
+
 Open a bash terminal in the json-server/ folder by following the instructions below:
 
 cd ~/Desktop/NucampFolder/json-server
