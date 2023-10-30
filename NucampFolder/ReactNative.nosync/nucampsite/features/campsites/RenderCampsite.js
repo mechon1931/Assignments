@@ -18,8 +18,9 @@ const RenderCampsite = (props) => {
     const view = useRef();
 
     const isLeftSwipe = ({ dx }) => dx < -200;
+    const isRightSwipe = ({ dx }) => dx > 200;
 
-    const pandResponder = pandResponder.create({
+    const panResponder = PanResponder.create({
        
         onStartShouldSetPanResponder: () => true,
         onPanResponderGrant: () => {
@@ -52,6 +53,8 @@ const RenderCampsite = (props) => {
                     ],
                     { cancelable: false }
                 );
+            } else if(isRightSwipe(gestureState)) {
+                props.onShowModal();
             }
         }
     });
@@ -62,7 +65,7 @@ const RenderCampsite = (props) => {
                 animation='fadeInDown'
                 duration={2000}
                 delay={1000}
-                {...pandResponder.panHandlers}
+                {...panResponder.panHandlers}
                 ref={view}
             >
                 <Card containerStyle={ styles.cardContainer }>
