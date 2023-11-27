@@ -1,44 +1,89 @@
 const express = require('express');
 const partnerRouter = express.Router();
+const Partner = require('../models/partner');
 
-partnerRouter.route(`/:partnersId`)
+partnerRouter.route('/:partnerId')
 .all((req, res, next) => {
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'application/json');
     next();
 })
-.get((req, res) => {
-    res.end(`Testing GET for partnersId: ${req.params.partnersId}`);
+.get(async (req, res) => {
+    try {
+        const partner = await Partner.findById(req.params.partnerId);
+        res.json(partner);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 })
-.post((req, res) => {
-    res.end(`Will add the partnersId: ${req.body.partnersId} with description of ID: ${req.body.description}`);
+.post(async (req, res) => {
+    try {
+        const newPartner = await Partner.create(req.body);
+        res.json(newPartner);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 })
-.put((req, res) => {
-    res.statusCode = 403;
-    res.end(`PUT operation not supported on /partners/${req.params.partnersId}`);
+.put(async (req, res) => {
+    try {
+        const updatedPartner = await Partner.findByIdAndUpdate(
+            req.params.partnerId,
+            { $set: req.body },
+            { new: true }
+        );
+        res.json(updatedPartner);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 })
-.delete((req, res) => {
-    res.end('Deleting all partners/partnersId');
+.delete(async (req, res) => {
+    try {
+        await Partner.findByIdAndDelete(req.params.partnerId);
+        res.json({ message: 'Partner deleted successfully' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 });
 
 partnerRouter.route('/')
 .all((req, res, next) => {
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'application/json');
     next();
 })
-.get((req, res) => {
-    res.end('Will send all the partners to you');
+.get(async (req, res) => {
+    try {
+        const partners = await Partner.find({});
+        res.json(partners);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 })
-.post((req, res) => {
-    res.end(`Will add the partners: ${req.body.name} with description: ${req.body.description}`);
+.post(async (req, res) => {
+    try {
+        const newPartner = await Partner.create(req.body);
+        res.json(newPartner);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 })
 .put((req, res) => {
-    res.statusCode = 403;
-    res.end('PUT operation not supported on /partners');
+    res.status(403).json({ error: 'PUT operation not supported on /partners' });
 })
-.delete((req, res) => {
-    res.end('Deleting all partners');
+.delete(async (req, res) => {
+    try {
+        await Partner.deleteMany({});
+        res.json({ message: 'All partners deleted successfully' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 });
 
 module.exports = partnerRouter;
