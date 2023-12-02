@@ -64,4 +64,5 @@ promotionRouter.route('/')
         res.status(500).json({ error: 'Internal Server Error' });
     }
 })
-.po
+
+module.exports = promotionRouter;
