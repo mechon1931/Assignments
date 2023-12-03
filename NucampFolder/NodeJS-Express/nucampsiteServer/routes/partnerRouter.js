@@ -1,89 +1,76 @@
 const express = require('express');
 const partnerRouter = express.Router();
 const Partner = require('../models/partner');
-
-partnerRouter.route('/:partnerId')
-.all((req, res, next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    next();
-})
-.get(async (req, res) => {
-    try {
-        const partner = await Partner.findById(req.params.partnerId);
-        res.json(partner);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-})
-.post(async (req, res) => {
-    try {
-        const newPartner = await Partner.create(req.body);
-        res.json(newPartner);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-})
-.put(async (req, res) => {
-    try {
-        const updatedPartner = await Partner.findByIdAndUpdate(
-            req.params.partnerId,
-            { $set: req.body },
-            { new: true }
-        );
-        res.json(updatedPartner);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-})
-.delete(async (req, res) => {
-    try {
-        await Partner.findByIdAndDelete(req.params.partnerId);
-        res.json({ message: 'Partner deleted successfully' });
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
+const authenticate = require('../authenticate');
 
 partnerRouter.route('/')
-.all((req, res, next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    next();
-})
-.get(async (req, res) => {
-    try {
-        const partners = await Partner.find({});
-        res.json(partners);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-})
-.post(async (req, res) => {
-    try {
-        const newPartner = await Partner.create(req.body);
-        res.json(newPartner);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-})
-.put((req, res) => {
-    res.status(403).json({ error: 'PUT operation not supported on /partners' });
-})
-.delete(async (req, res) => {
-    try {
-        await Partner.deleteMany({});
-        res.json({ message: 'All partners deleted successfully' });
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
+    .get((req, res, next) => {
+        Partner.find()
+        .then(partners => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(partners);
+        })
+        .catch(err => next(err));
+    })
+    .post(authenticate.verifyUser, (req, res, next) => {
+        Partner.create(req.body)
+        .then(partner => {
+            console.log('Partner Created', partner);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(partner);
+        })
+        .catch(err => next(err));
+    })
+    .put(authenticate.verifyUser, (req, res) => {
+        res.status(403).json({ error: 'PUT operation not supported on /partners' });
+    })
+    .delete(authenticate.verifyUser, (req, res, next) => {
+        Partner.deleteMany()
+        .then(response => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(response);
+        })
+        .catch(err => next(err));
 });
+
+partnerRouter.route('/:partnerId')
+    .get((req, res, next) => {
+        Partner.findById(req.params.partnerId)
+        .then(partner => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(partner);
+        })
+        .catch(err => next(err));
+    })
+    .post(authenticate.verifyUser, (req, res) => {
+        res.statusCode = 403;
+        res.end(`POST operation not supported on /partners/${req.params.partnerId}`);
+    })
+    .put(authenticate.verifyUser, (req, res, next) => {
+        Partner.findByIdAndUpdate(req.params.partnerId, {
+            $set: req.body
+        }, { new: true })
+        .then(partner => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(partner);
+        })
+        .catch(err => next(err));
+    })
+    .delete(authenticate.verifyUser, (req, res, next) => {
+        Partner.findByIdAndDelete(req.params.partnerId)
+        .then(response => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(response);
+        })
+        .catch(err => next(err));
+    });
+
+
 
 module.exports = partnerRouter;
