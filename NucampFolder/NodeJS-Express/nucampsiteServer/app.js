@@ -13,8 +13,6 @@ const promotionRouter = require('./routes/promotionRouter');
 const partnerRouter = require('./routes/partnerRouter');
 
 const mongoose = require('mongoose');
-const { setEngine } = require('crypto');
-const { authenticate } = require('./models/campsite');
 
 const url = config.mongoUrl;
 const connect = mongoose.connect(url, {
@@ -56,7 +54,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
