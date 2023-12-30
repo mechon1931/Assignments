@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width-device=width, initial-scale=1.0'>
+   <title>Employee's Idea Survey Form</title>
+   <link rel='stylesheet' href='styles.css'>
+  </head>
+  <body>
+    <header>
+      <h1 id='title'>Employee Idea Survey Form</h1>
+      <p id='description'>Idea Survey</p>
+    </header>
+    <form id='survey-form'>
+    <label id='name-label'>
+      First Name: 
+        <input id='name' type='text' placeholder='Enter your first name' required>
+        </input>
+    </label> 
+    <label id='name-label'>
+      Last Name: 
+        <input id='name' type='text' placeholder='Enter your last name' required>
+        </input>
+    </label> 
+    <label id='email-label'>
+      E-mail: 
+        <input id='email' type='email' placeholder='Enter your E-mail' required>
+        </input>
+    </label>
+
+    <fieldset>
+      <legend>How can we better connect with our customers:</legend>
+      <label for="forums">
+        <input type="radio" id='forums' name="forums" class="inline" checked/>Forums
+      </label>
+      <label for="video">
+        <input type="radio" id='video' name="video" class="inline" />Videos
+      </label>
+      <label for="Phone">
+        <input type="radio" id='Phone' name="Phone" class="inline" />Phone
+      </label>
+      <label for="other">
+        <input type="radio" id='other' name="other" class="inline" />Other
+      </label>
+    </fieldset>
+
+    <label  id='number-label'>
+      Enter your number:
+        <input type='number' id='number' min='1' max='5' placeholder='1-5'> 
+        </input>
+    </label>
+    <select id='dropdown'>
+      <label>Choose One</label>
+      <option>Account</option>
+      <option>Connections</option>
+    <select>
+    
+    <label>
+      <textarea>
+
+      </textarea>
+    </label>
+     <button id='submit'>
+       Submit
+      </button>
+    </form>
+  </body>
+</html>
