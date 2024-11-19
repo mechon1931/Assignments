@@ -8,6 +8,7 @@
     "start": "node index"
   },
   "dependencies": {
-    "mongoose": "^5.10.9"
+    "mongoose": "^5.10.9",
+    "node-mongoose": "file:"
   }
 }

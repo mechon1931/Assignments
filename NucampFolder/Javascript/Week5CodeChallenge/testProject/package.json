@@ -15,6 +15,7 @@
     "parcel": "^2.9.3"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "testproject": "file:"
   }
 }
