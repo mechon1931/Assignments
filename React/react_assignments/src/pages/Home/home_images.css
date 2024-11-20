@@ -1,0 +1,59 @@
+.image_grid {
+    display: flex;
+    flex-wrap: wrap; /*allow items to wrap onto a new line on smaller screens. */
+    justify-content: center; /* centers text */
+    gap: 20px; /* creates a gap */
+    padding: 20px;
+}
+
+.image_container {
+    text-align: center;
+    margin: 20px;
+    flex-direction: column; /*keeps the images in horizontal */
+    columns: 2
+}
+ 
+.workout_image {
+    display: flex;
+    flex-direction: column; /*ensure buttons stays below the image */
+    align-items: center; /*centers the content horizontally */
+    width: calc(50% -20px); /*each item takes up 50% of the container, minus the gap */
+    max-width: 400px;
+}
+.link_button {
+    text-decoration: none; /*removes lines */
+    color: white;
+    background-color: #1abc9c;
+    padding: 10px 20px;
+    border-radius: 5px; /* rounded button*/
+    transition: background-color .3s ease;
+    width: 100%;
+    margin: 4px 0;
+    margin-bottom: 20px;
+}
+
+.link_button:hover {
+    background-color: #01951a;
+}
+
+/*changes setting for images */
+.image {
+    width: 100%;
+    max-width: 500px;
+    height: 266px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .image_container {
+        text-align: center;
+        margin: 20px;
+        flex-direction: column; /*keeps the images in horizontal */
+        columns: 1;
+    }
+    .workout_image {
+        width: 100%;
+    }
+}

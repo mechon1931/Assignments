@@ -1,0 +1,16 @@
+.welcome_section {
+    text-align: center; /* center text */
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.welcome_section h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.welcome_section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+

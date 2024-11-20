@@ -1,0 +1,78 @@
+/* Notification Header Styles */
+.notification_header {
+    background-color: blue;
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    height: 36px; /* Height of the box */
+    color: white; /* Text color */
+    position: sticky; /* Sticks to the top while scrolling */
+    top: 0; /* Ensures it stays at the very top */
+    z-index: 1000; /* Ensures it appears above other content */
+    padding: 0 10px; /* Adds some horizontal padding */
+}
+
+/* Header Container Styles */
+header {
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: space-between; /* Creates space between logo and nav */
+    background-color: #333; /* Dark background color */
+    height: 70px; /* Height of the container */
+    color: white; /* Text color */
+    padding: 0 20px; /* Adds horizontal padding */
+}
+
+/* Logo Title */
+.header_title {
+    font-size: 1.5rem; /* Adjusts font size for visibility */
+    font-weight: bold; /* Makes the logo title stand out */
+    background-color: #333;
+}
+
+/* Navigation Links Container */
+.nav_links {
+    display: flex; /* Aligns links horizontally */
+    list-style: none; /* Removes bullet points */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    background-color: #333;
+}
+
+/* Individual Link Styles */
+.nav_links li {
+    margin: 0 15px; /* Adds spacing between links */
+    background-color: #333;
+}
+
+.nav_links li a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Link text color */
+    font-size: 1rem; /* Sets font size */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    background-color: #333;
+}
+
+.nav_links li a:hover {
+    color: #1abc9c; /* Highlight color when hovered */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: flex;
+        align-items: flex-start; /* Aligns items to the left */
+        padding: 10px;
+    }
+
+    .nav_links {
+        flex-direction: flex; 
+        justify-content: space-evenly;
+        margin: 0 10px;
+        width: 100%; /*full width */
+    }
+
+    .nav_links li {
+        margin: 10px 0; /*adds vertical spacing for links */
+    }
+}
