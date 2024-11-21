@@ -22,10 +22,8 @@ function Home() {
                 <div className='image_container'>
                     <div className='workout_image'>
                         <img src={strengthImage} alt='strength_photo_stock' className='image'/>
-                        <Link to="/strength">
-                            <button href='#strength' className='link_button'>
-                                Track Strength workouts
-                            </button>
+                        <Link to="/strength" className='link_button'>
+                            Track Strength Workouts   
                         </Link>
                     </div>
 

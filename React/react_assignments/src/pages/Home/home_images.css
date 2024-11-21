@@ -20,11 +20,17 @@
     width: calc(50% -20px); /*each item takes up 50% of the container, minus the gap */
     max-width: 400px;
 }
+
+button {
+    width: 500px;
+}
+
 .link_button {
+    display: inline-block;
     text-decoration: none; /*removes lines */
     color: white;
     background-color: #1abc9c;
-    padding: 10px 20px;
+    padding: 10px 0;
     border-radius: 5px; /* rounded button*/
     transition: background-color .3s ease;
     width: 100%;
