@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-Based Budget - My Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Website</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="index.html#about" class="hover:text-blue-200">About</a></li>
+                    <li><a href="index.html#services" class="hover:text-blue-200">Services</a></li>
+                    <li><a href="budget.html" class="hover:text-blue-200">Budget</a></li>
+                    <li><a href="index.html#contact" class="hover:text-blue-200">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Zero-Based Budget Section -->
+        <section id="zero-based-budget" class="py-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Zero-Based Budget Planner</h2>
+            <p class="text-lg text-gray-700 text-center mb-6">Plan your finances by assigning every dollar of your income to a category. Ensure your total expenses equal your income for a zero-based budget.</p>
+            <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+                <div class="mb-6">
+                    <label for="income" class="block text-gray-700 font-semibold mb-2">Monthly Income ($)</label>
+                    <input type="number" id="income" class="w-full p-2 border rounded-lg" placeholder="Enter your total monthly income" min="0" step="0.01">
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Budget Categories</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-center justify-between">
+                        <label for="housing" class="text-gray-700">Housing</label>
+                        <input type="number" id="housing" class="w-1/2 p-2 border rounded-lg" placeholder="0.00" min="0" step="0.01">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label for="transportation" class="text-gray-700">Transportation</label>
+                        <input type="number" id="transportation" class="w-1/2 p-2 border rounded-lg" placeholder="0.00" min="0" step="0.01">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label for="food" class="text-gray-700">Food</label>
+                        <input type="number" id="food" class="w-1/2 p-2 border rounded-lg" placeholder="0.00" min="0" step="0.01">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label for="savings" class="text-gray-700">Savings</label>
+                        <input type="number" id="savings" class="w-1/2 p-2 border rounded-lg" placeholder="0.00" min="0" step="0.01">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label for="debt" class="text-gray-700">Debt Payments</label>
+                        <input type="number" id="debt" class="w-1/2 p-2 border rounded-lg" placeholder="0.00" min="0" step="0.01">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label for="miscellaneous" class="text-gray-700">Miscellaneous</label>
+                        <input type="number" id="miscellaneous" class="w-1/2 p-2 border rounded-lg" placeholder="0.00" min="0" step="0.01">
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <p class="text-gray-700 font-semibold">Remaining Budget: <span id="remaining" class="text-blue-600">$0.00</span></p>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 w-full mt-4">Calculate Budget</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Budget Calculation -->
+    <script>
+        document.querySelector('button').addEventListener('click', () => {
+            const income = parseFloat(document.getElementById('income').value) || 0;
+            const housing = parseFloat(document.getElementById('housing').value) || 0;
+            const transportation = parseFloat(document.getElementById('transportation').value) || 0;
+            const food = parseFloat(document.getElementById('food').value) || 0;
+            const savings = parseFloat(document.getElementById('savings').value) || 0;
+            const debt = parseFloat(document.getElementById('debt').value) || 0;
+            const miscellaneous = parseFloat(document.getElementById('miscellaneous').value) || 0;
+
+            const totalExpenses = housing + transportation + food + savings + debt + miscellaneous;
+            const remaining = income - totalExpenses;
+
+            const remainingElement = document.getElementById('remaining');
+            remainingElement.textContent = `$${remaining.toFixed(2)}`;
+            remainingElement.classList.remove('text-blue-600', 'text-red-600', 'text-green-600');
+            if (remaining > 0) {
+                remainingElement.classList.add('text-green-600');
+            } else if (remaining < 0) {
+                remainingElement.classList.add('text-red-600');
+            } else {
+                remainingElement.classList.add('text-blue-600');
+            }
+        });
+    </script>
+</body>
+</html>
