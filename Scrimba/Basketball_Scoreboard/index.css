@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Cursed Timer'; /* Choose a family name for reference */
+    src: url('./fonts/cursed-timer/CursedTimer.ttf') format('truetype'); /* Point to the font file */
+    font-weight: 400; /* Define the weight */
+    font-style: normal; /* Define the style */
+}
+
+.container {
+    background: #1B244A;
+    font-family: Verdana;
+    font-weight: 700px;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 35.89px;
+    letter-spacing: 0%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;  
+    width: 575px;
+    opacity: 1;
+    border-radius: 16px;
+    padding: 18px 8px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h3 {
+    opacity: 1;
+    font-family: Verdana;
+    font-weight: 700;
+    font-style: Bold;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #EEEEEE;
+}
+
+h4 {
+    opacity: 1;
+    border-radius: 5px;
+    background: #080001;
+    color: #F94F6D;
+    font-family: 'Cursed Timer', sans-serif, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 126.67px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10%;
+}
+
+button {
+    opacity: 1;
+    top: 271px;
+    left: 80px;
+    border-radius: 5px;
+    color: #9AABD8;
+    border: 2px solid #9AABD8;
+    background: #1B244A; 
+}
+
+
