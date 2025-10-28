@@ -1,0 +1,73 @@
+body {
+    background: #1F2937;
+    margin: 0;
+}
+
+.container {
+    margin: 10%;
+}
+
+h1 {
+    color: white;
+}
+
+span {
+    color: #34D399;
+    display: block;
+}
+
+p {
+    color: white;
+    font-style: oblique;
+    font-weight: 100;
+    margin-bottom: 5%;
+}
+
+button {
+    background: #34D399;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 100;
+    padding: 9px 17px 9px 15px;
+}
+
+hr {
+    border-color: #2F3E53;
+    margin-top: 5%;
+}
+
+.slidecontainer {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+output {
+    padding-right: 15%;
+    color: white;
+}
+
+.buttons-container {
+    display: flex; /* Changed to Flexbox for simpler centering */
+    gap: 10px; /* Space between buttons */
+}
+
+.placeholder1 {
+    background: #273549;
+    border-radius: 6px;
+    height: auto;
+    width: auto;
+    margin-bottom: 10px;
+} 
+
+.placeholder2 {
+    background: #273549;
+    border-radius: 6px;
+    height: auto;
+    width: auto;
+}
+
+
+
