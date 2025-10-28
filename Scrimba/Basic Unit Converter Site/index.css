@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    text-align: center;
+    
+}
+
+.hero {
+    background: #6943fe;
+    color: white;
+    padding: 30px;
+}
+
+.number-converter {
+      border: 2px solid #B295FF;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;   /* horizontal */
+      align-items: center;       /* vertical   */
+      font-size: 40px;
+      margin: 0 auto 20px;       /* center the whole box horizontally */
+      max-width: 100px;          /* optional – limits width */
+      padding: 10px 0;
+      text-align: center;
+}
+
+.convert-btn {
+    background: #FFFFFF;
+    border: 2px none;
+    border-radius: 5px; 
+    padding: 10px 25px;
+}
+
+.conversion-container {
+    background: #1F2937;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.length-card {
+    margin: 0px 20px 20px 20px;
+    padding: 10px 0px 10px 0px;
+    background: #273549;
+    border: 2px none;
+    color: #CCC1FF;
+}
+
+.volume-card {
+    margin: 0px 20px 20px 20px;
+    padding: 10px 0px 10px 0px;
+    background: #273549;
+    border: 2px none;
+    color: #CCC1FF;
+}
+
+.mass-card {
+    margin: 0px 20px 20px 20px;
+    padding: 10px 0px 10px 0px;
+    background: #273549;
+    border: 2px none;
+    color: #CCC1FF;
+}
+
+p {
+    color: #FFFFFF;
+    padding: 0px 5px;
+}
