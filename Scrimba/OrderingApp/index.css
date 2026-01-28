@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+}
+
+.smythe-regular {
+  font-family: "Smythe", system-ui;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+/*Header Section*/
+.container {
+    margin: auto;
+    color: #FFFFFF;
+    left: 0px;
+    top: 0px;
+    width: 600px;
+}
+
+ .header-h1 {
+    font-family: 'Smythe';
+    font-size: 39px;
+    height: 24px;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;     
+    top: 40px;
+    width: 169.28px;
+}
+
+.header-p {
+    font-family: "Smythe", system-ui;
+    font-size: 22.4216px;    
+    height: 8px;        
+    line-height: 14px;
+    position: absolute;
+    text-align: center;    
+    top: 86px;
+    width: 275.46px;    
+}
+
+/*Menu container/array*/
+.menu-container {
+    border-bottom: 1px silver solid;    
+    display: flex;    
+    margin: auto;
+    padding-top: 30px;
+    width: 508px;
+}
+
+.emoji {    
+    font-size: 80px;    
+    left: 46px;    
+    opacity: 0.72;
+    top: 234px;
+    width: 70px;
+}
+
+/*Menu container text*/
+.data-container {
+    display: block;
+    padding-left: 25px;
+}
+
+.menu-name {
+    color: #000000;
+    font-family: 'Smythe';
+    font-size: 28px;
+    font-style: normal;    
+    height: 17px;
+    margin: 0;  
+    width: 43px;
+}
+
+.menu-ingredients {
+    color: #8B8B8B;
+    font-family: 'Smythe';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    width: 358px;
+}
+
+.menu-price {
+    color: #000000;
+    font-family: 'Smythe';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.add-button {
+    background-color: white;
+    border: solid #DEDEDE;
+    border-radius: 50%;
+    height: 50px;
+    left: 504px;
+    top: 242px;
+    width: 50px;
+}
+
+/*Checkout Section*/
+.checkout {
+    margin: 50px auto 100px auto;
+    top: 789px;    
+    text-align: center;
+    width: 508px;
+    
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  font-family: 'Smythe';
+  font-style: normal; 
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.row .item-name {
+  margin: 0;
+}
+
+.row .remove-button {
+  padding: 0;
+  background: none;
+  color: #BBBBBB;
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  height: 22px;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  margin-right: 100px;
+}
+
+.row .checkout-price {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+/*Total Price Checkout*/
+.totals {
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Smythe';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.complete-order {
+    border: none;
+    background: #16DB99;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    color: #FFFFFF;
+    height: 60px;
+    left: 46px;
+    width: 508px;  
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31.12px;
+    letter-spacing: 0%;
+  
+}
+/*Modal for Credit Card Details*/
+.credit-card-details {
+    margin: auto;
+    position: absolute;
+    width: 524px;
+    height: 450px;
+    left: 38px;
+    top: 292px;
+    background: #FFFFFF;
+    border-radius: 3.88991px;
+    box-shadow: 5.19px 5.19px 255.44px 0px #00000080;
+
+}
+
+.modal-header {
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+    text-align: center;
+}
+
+form {
+    padding: 25px;
+    display: grid; 
+}
+
+.modal-name {
+    border-radius: 5px solid #757575;
+    width: 450.91px;
+    height: 50.3px;
+    left: 61.22px;
+    top: 426.32px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.modal-card-number {
+    border-radius: 5px solid #757575;
+    width: 450.91px;
+    height: 50.3px;
+    left: 61.22px;
+    top: 426.32px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.modal-CVV {
+    border-radius: 5px solid #757575;
+    width: 450.91px;
+    height: 50.3px;
+    left: 61.22px;
+    top: 426.32px;
+    margin-bottom: 30px;
+    padding-left: 25px;
+    
+}
+
+.paybtn {
+    margin: auto;
+    width: 450.91px;
+    height: 71.3px;
+    left: 61.22px;
+    top: 733.09px;
+    background: #16DB99;
+    border: none;
+    border-radius: 3.88991px;
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31.12px;
+    letter-spacing: 0%;
+    align-items: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.pay-container {
+    position: absolute;
+    width: 504px;
+    height: 120px;
+    left: 50px;
+    top: 689px;
+    background: #ECFDF5;
+    border-radius: 3px;
+}   
+
+.thankyou-text {
+    margin: auto;    
+    width: 379px;
+    height: 17px;
+    left: 109px;
+    top: 840px;
+    font-family: 'Smythe';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 30px;
+    color: #065F46;
+}
