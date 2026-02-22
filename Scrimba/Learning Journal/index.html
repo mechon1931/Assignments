@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>My Learning Journal</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-header">
+                    <img src="/images/LogoSmile.png" class="logo">
+                    <h4 class="nav-title">My Learning Journal</h4>
+                </div>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/aboutme.html">About Me</a></li>
+                    <li><a href="/learningjournal.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="hero" id="hero">
+            <div class="hero-text">
+                <p class="hero-date">February 23, 2026</p>
+                <h1>My new journey as a bootcamp student.</h1>
+                <P>After several months of learning in the Frontend Developer Career Path, I've made this big jump over to the bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>    
+            </div>
+        </section>
+        
+        <div class="blogs">
+            <article class="blog-one">
+                <img class="blog-one-image "src="/images/blogOne.png">
+                <p class="hero-date">February 23, 2026</p>
+                <h2>Blog One</h2>
+                <P>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+            </article>
+            <article class="blog-two">
+                <img class="blog-two-image "src="/images/blogTwo.png">
+                <p class="hero-date">February 23, 2026</p>
+                <h2>Blog Two</h2>
+                <P>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+            </article>
+            <article class="blog-Three">
+                <img class="blog-Three-image "src="/images/blogThree.png">
+                <p class="hero-date">February 23, 2026</p>
+                <h2>Blog Three</h2>
+                <P>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+            </article>
+            <article class="blog-four">
+                <img class="blog-four-image "src="/images/blogFour.png">
+                <p class="hero-date">February 23, 2026</p>
+                <h2>Blog Four</h2>
+                <P>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+            </article>
+            <article class="blog-five">
+                <img class="blog-five-image "src="/images/blogFive.png">
+                <p class="hero-date">February 23, 2026</p>
+                <h2>Blog Five</h2>
+                <P>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+            </article>
+            <article class="blog-six">
+                <img class="blog-six-image "src="/images/blogSix.png">
+                <p class="hero-date">February 23, 2026</p>
+                <h2>Blog Six</h2>
+                <P>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+            </article>
+        </div>
+        <p class="view-more"><span>View More<span><p>
+            
+        <footer>
+            <p>My Learning Journal</p>
+            <p>Copyright ©2022</p>
+        </footer>
+
+        <script type="module">
+            const clickHero = document.getElementById("hero")
+
+            clickHero.addEventListener('click', () => {
+                if(clickHero) {
+                    window.open("/learningjournal.html", "_blank")
+                } else {
+                    console.log('not found')
+                }
+            })
+        </script> 
+    </body>
+</html>

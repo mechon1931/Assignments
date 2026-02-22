@@ -1,0 +1,146 @@
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header*/
+nav {
+   display: flex;
+    justify-content: space-between;
+    align-items: center;          /* Vertically centers logo + links */
+    padding: 1rem 3%;             /* Better than margin + % on children */
+    background: #fff; 
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.logo {    
+    height: 50px;                 /* Use fixed px/rem instead of % for consistency */
+    width: auto;                  
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;  
+}
+
+li {
+    text-decoration: none;
+    color: #333;                  /* Add color – was missing */
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Hero*/
+.hero {
+    color: white;
+    background: url("/images/HeroBackground.png");
+    background-position: center;
+    background-size: cover;       /* cover is usually better than 100% + cover */
+    background-repeat: no-repeat;  
+    min-height: 100vh;         /* More flexible than fixed 600px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;    /* Text at bottom */
+    padding-bottom: 10vh; }
+    
+.hero:hover {
+    cursor: pointer;
+}
+
+.hero-text {
+    max-width: 65%;               /* Better than width + padding combo */
+    padding: 0 5%;
+    margin: 0 5vh ;      /* Centers if needed + bottom space */
+    line-height: 1.5;             
+}
+
+/*Main Content */
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Responsive: tries 3, drops to 2/1 */
+    gap: 2rem;                    /* Consistent spacing instead of margins everywhere */
+    padding: 3rem 5%;             /* Replaces margin-left + child margins */
+    max-width: 1400px;            /* Prevents ultra-wide on big screens */
+    margin: 0 auto;               /* Centers the grid */
+    /* border: 2px solid red; */  /* Keep for debugging, then remove */
+}
+
+.blogs article {                  /* Assuming each blog is wrapped in <article> or <div> */
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;             /* Prevents image overflow */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Optional nice look */
+}
+.blogs img {
+    width: 100%;
+    height: 220px;                /* Fixed height for uniform cards */
+    object-fit: cover;            /* Crops nicely, no distortion */
+    display: block;               /* Removes bottom gap under image */
+    margin-bottom: 10px;                    /* No extra top margin */
+}
+
+.blogs h2 {
+    text-align: center;
+}
+
+.blogs p {
+    padding: 0 1.5rem 1.5rem;
+    margin: 0;
+    font-size: 1.1rem;            /* Slightly smaller for better fit */
+    line-height: 1.5;
+}
+
+.view-more {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.view-more:hover {
+    cursor: pointer;
+}
+
+footer {
+    color: #fff;
+    background: #1E1E1E;
+    text-align: center;
+    padding: 2%;
+    line-height: .75rem;
+}
+
+.learningJournalImg-text {
+    margin: 0 10% 0 10%;
+}
+
+.learningjournalImg {
+    margin: 0 5%;
+    max-width: 90%;
+}
+
+.hero-text1 {             
+    line-height: 1.5; 
+    font-size: .90rem;
+}
+
+.view-more1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
