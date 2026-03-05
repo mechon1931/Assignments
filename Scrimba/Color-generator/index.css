@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    margin: 2rem 5rem;
+}
+
+input {
+    height: 10vh;
+    width: 10vw;
+    margin-right: 20px;
+}
+
+select {
+    margin-right: 20px;
+    width: 45vw;
+    height: 10vh;
+    border: gray solid 1px;
+    border-radius: 5px;
+}
+
+button {
+    border: gray 2px solid;
+    border-radius: 5px;
+    background-color: #FEFFFF;
+}
+
+.color-display {
+    display: flex;
+    height: 80vh;
+}
+
+.color-block {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+}
+
+.color-text {
+    background-color: #FfFFFF;
+    width: 100%;
+    text-align: center;
+    padding: 15%;
+}
+
+
