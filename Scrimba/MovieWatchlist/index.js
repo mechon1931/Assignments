@@ -4,7 +4,7 @@ const movies = document.getElementById("movie-list")
 
 searchbtn.addEventListener('click', () => {
         
-    let searchtext = search.value.trim()
+    let searchtext = search.value
     
     fetch(`https://www.omdbapi.com/?t=${searchtext}&plot=short&apikey=e7bfc93d`)
     .then(res => res.json())

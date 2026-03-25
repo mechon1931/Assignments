@@ -76,6 +76,7 @@ header {
 
 /* ── Search Bar ───────────────────────────────────────── */
 .search-container {
+  margin: auto auto 0;
   width: 100%;
   max-width: 620px;
   padding: 0 5%;
@@ -171,15 +172,6 @@ header {
   display: flex;  
   width: 100%;
   flex-grow: 1;
-    /*width: 200px;
-    margin: 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background: #fff;
-    text-align: center;
-    transition: transform 0.2s;
-    overflow: hidden;*/
 }
 
 hr {
@@ -257,5 +249,5 @@ hr {
   margin-top: 10px;
   margin-left: 10px;
   clear: none;
-  color: 6B7299;
+  color: #6B7299;
 }
