@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Your Film</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="hero-header">
+    <div class="header-content">
+      <h1 class="main-title">Find your film</h1>
+      <a href="/watchlist.html" class="watchlist-link">My Watchlist</a>
+    </div>
+  </header>
+  
+  <main>
+    <!-- Search bar -->
+    <div class="search-container">
+      <form class="search-form">
+        <input 
+          type="search" 
+          placeholder="Search movies, TV shows, actors..."
+          id="search-input" 
+          class="search-input"
+          autocomplete="off"
+        >
+        <button type="submit" id="search-button" class="search-button">
+          Search
+        </button>
+      </form>
+    </div>
+    
+    <section id="movie-list" class="movie-list movie-list-nobg"></section>
+  </main>
+  
+  <script src="/index.js" type="module"></script>
+
+</body>
+</html>
